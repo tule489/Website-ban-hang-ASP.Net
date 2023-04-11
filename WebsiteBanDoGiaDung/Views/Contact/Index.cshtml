@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@section style {
+    <link rel="stylesheet" href="~/Assets/User/css/Gioithieu.css" type="text/css">
+    <link rel="stylesheet" href="~/Assets/User/css/LienHe.css" type="text/css">
+}
+
+<div class="gt-banner">
+    <div class="gt-banner-content">
+        <div class="gt-banner-img">
+            <img src="~/Assets/User/Images/page-title-background.jpg" alt="">
+            <div class="gt-banner-block">
+                <div class="gt-banner-title">
+                    <h1>LIÊN HỆ</h1>
+                </div>
+                <div class="gt-banner-text">
+                    <a href="/Home/Index">Trang chủ </a>
+                    <span class="gach_ngang"> / </span>
+                    liên hệ
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gap"></div>
+<div class="lhcontainer">
+    <div class="lhmain">
+        <div class="lhleft" style="display: flex; align-items: center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.487019242373!2d106.6571115!3d10.7739619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ee98946d601%3A0xb3eba90e385e4dea!2zTMO9IFRoxrDhu51uZyBLaeG7h3QsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1670075904699!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="lhright">
+            <div class="lhtop">
+                <div class="lhlogo">
+                    <img src="~/Assets/User/Images/logo-mona.png" alt="" height="80px">
+                </div>
+                <div class="lhtext">
+                    <p>319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</p>
+                    <p>0123 123 4444</p>
+                    <p><a href="#">nationaldirect@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="lhbot">
+                <div class="lhtitle">
+                    <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
+                </div>
+                <div class="lhform">
+                    <form>
+                        <input type="text" placeholder="Họ và tên">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Số điện thoại">
+                        <input type="text" placeholder="Địa chỉ">
+                        <textarea placeholder="Lời nhắn"></textarea>
+                        <input type="submit" value="GỬI">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

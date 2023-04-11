@@ -1,0 +1,110 @@
+﻿@model IEnumerable<WebsiteBanDoGiaDung.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Quản lý sản phẩm</h2>
+
+<div>
+    @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+    {
+        <label>Lọc theo danh mục: </label>
+        <div>
+            @Html.DropDownList("Category", "-- Tất cả --")
+        </div>
+        <label>Lọc theo tên: </label>
+        <div>
+            @Html.TextBox("Search")
+            <input type="submit" value="Lọc" />
+        </div>
+
+    }
+</div>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Tên
+        </th>
+        <th>
+            Loại
+        </th>
+        <th>
+            Chất liệu
+        </th>
+        <th style="text-align: center">
+            Kích thước<br />
+            (dài x rộng x Cao)
+        </th>
+        <th>
+            Giá
+        </th>
+        <th>
+            Mô tả bàn
+        </th>
+        <th>
+            Mô tả ghế
+        </th>
+        <th>
+            Mô tả giá
+        </th>
+        <th>
+            Mô tả tổng quát
+        </th>
+        <th>
+            Ảnh
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.material)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberOfTable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberOfChair)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberOfShelf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            <img src="~/Assets/Images/Products/@item.image" style="width: 150px"/>
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

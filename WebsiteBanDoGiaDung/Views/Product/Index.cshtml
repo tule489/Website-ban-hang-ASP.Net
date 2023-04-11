@@ -1,0 +1,36 @@
+﻿@model List<WebsiteBanDoGiaDung.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@section style {
+    <link rel="stylesheet" href="~/Assets/User/css/Gioithieu.css" type="text/css">
+}
+
+<div class="gt-banner">
+    <div class="gt-banner-content">
+        <div class="gt-banner-img">
+            <img src="~/Assets/User/Images/page-title-background.jpg" alt="">
+            <div class="gt-banner-block">
+                <div class="gt-banner-title">
+                    <h1>SẢN PHẨM</h1>
+                </div>
+                <div class="gt-banner-text">
+                    <a href="Trangchu.html">Trang chủ </a>
+                    <span class="gach_ngang"> / </span>
+                    Sản phẩm
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gap"></div>
+
+<div>
+    @foreach (var item in Model)
+    {
+        @Html.Action("ListProduct", "Layout", new { categoryID = item.id });
+    }
+</div>

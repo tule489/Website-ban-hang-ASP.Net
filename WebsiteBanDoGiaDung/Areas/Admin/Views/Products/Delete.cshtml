@@ -1,0 +1,112 @@
+﻿@model WebsiteBanDoGiaDung.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn có chắc là muốn xóa sản phẩm này không?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+
+        <dt>
+            Tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.name)
+        </dd>
+
+        <dt>
+            Chất liệu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.material)
+        </dd>
+
+        <dt>
+            Kích thước
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.size)
+        </dd>
+
+        <dt>
+            Giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            Mô tả số bàn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberOfTable)
+        </dd>
+
+        <dt>
+            Mô tả số ghế
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberOfChair)
+        </dd>
+
+        <dt>
+            Mô tả số giá để đồ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberOfShelf)
+        </dd>
+
+        <dt>
+            Mô tả tổng quát
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            Ảnh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>

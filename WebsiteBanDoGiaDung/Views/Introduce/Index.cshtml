@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@section style {
+    <link href="~/Assets/User/css/Gioithieu.css" rel="stylesheet" />
+}
+
+<div class="gt-banner">
+    <div class="gt-banner-content">
+        <div class="gt-banner-img">
+            <img src="~/Assets/User/Images/page-title-background.jpg" alt="">
+            <div class="gt-banner-block">
+                <div class="gt-banner-title">
+                    <h1>GIỚI THIỆU</h1>
+                </div>
+                <div class="gt-banner-text">
+                    <a href="/Home/Index">Trang chủ </a>
+                    <span class="gach_ngang"> / </span>
+                    Giới thiệu
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gap"></div>
+<div class="gt-container">
+    <div class="gt-content">
+        <div class="gt-row1">
+            <div class="gtrow1-block block-border">
+                <div class="gt-title-block">
+                    <h3>MỤC TIÊU</h3>
+                </div>
+                <div class="gt-text-block">
+                    <p>
+                        Cung cấp những sản phẩm chất lượng tốt nhất tới khách hàng, mang tới trải nghiệm tuyệt vời
+                        nhất.
+                    </p>
+                </div>
+            </div>
+            <div class="gtrow1-block block-border">
+                <div class="gt-title-block">
+                    <h3>SỨ MỆNH</h3>
+                </div>
+                <div class="gt-text-block">
+                    <p>
+                        Chú trọng phát triển mọi mặt; cả về chất lượng dịch vụ; cơ sở vật chất và chất lượng nhân
+                        sự, hướng tới một dịch vụ tốt nhất cho khách hàng.
+                    </p>
+                </div>
+            </div>
+            <div class="gtrow1-block">
+                <div class="gt-title-block">
+                    <h3>TƯƠNG LAI</h3>
+                </div>
+                <div class="gt-text-block">
+                    <p>
+                        Tự động cập nhật tình trạng của mẫu mã sắp được cập bến kho, chọn lọc cho phù hợp nhất cho
+                        từng khách hàng qua từng sản phầm mà khách hàng đã mua.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="gt-row2">
+            <div class="gt-slideshow">
+                <div class="mySlide" style="display: block;">
+                    <img src="~/Assets/User/Images/cu-lao-cham.jpg" width="1100px" height="550px;" alt="">
+                </div>
+                <div class="mySlide">
+                    <img src="~/Assets/User/Images/tuk.jpg" width="1100px" height="550px;" alt="">
+                </div>
+                <div class="mySlide">
+                    <img src="~/Assets/User/Images/lang-hoa.jpg" width="1100px" height="550px;" alt="">
+                </div>
+                <a class="prev" onClick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onClick="plusSlides(1)">&#10095;</a>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="khoang_cach"></div>
+    </div>
+</div>
+<div class="gap"></div>
+
+<script>
+    var sothutu = 1;
+    showSlides(sothutu);
+
+    function plusSlides(n) {
+        showSlides(sothutu += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(sothutu = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlide");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { sothutu = 1 }
+        if (n < 1) { sothutu = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active1", "");
+        }
+        slides[sothutu - 1].style.display = "block";
+        dots[sothutu - 1].className += " active1";
+    }
+</script>

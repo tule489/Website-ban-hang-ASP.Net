@@ -1,0 +1,25 @@
+﻿@model List<WebsiteBanDoGiaDung.Models.Product>
+
+<div class="lp-container">
+    <div class="lp-main">
+        <h1>@ViewBag.categoryName</h1>
+        <br />
+        @foreach (var item in Model)
+        {
+            <div class="col3-block" style="width: 33.33%">
+                <div class="col3-img">
+                    <img src="~/Assets/Images/Products/@item.image" width="340px" height="180px;" alt="ban">
+                </div>
+                <div class="col3-text">
+                    <div class="title-block">
+                        @Html.ActionLink(item.name, "Index", "ProductDetail", new { productID = item.id }, null)
+                    </div>
+                    <div class="price-block">
+                        <span>@Html.FormatValue(item.price, "{0:#,###}") <u> đ</u></span>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

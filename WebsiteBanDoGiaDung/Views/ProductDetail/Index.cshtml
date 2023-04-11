@@ -1,0 +1,149 @@
+﻿@model WebsiteBanDoGiaDung.Models.Product
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@section style {
+    <link href="~/Assets/User/css/Sanpham.css" rel="stylesheet" />
+}
+
+<div class="ctlp-container">
+    <div class="ctlp-main">
+        <div class="ctlp-row1">
+            <div class="ctlprow1-text">
+                <a href="/Home/Index">trang chủ</a>
+                <span class="gach_ngang">/</span>
+                <a href="/Product/Index">sản phẩm</a>
+                <span class="gach_ngang">/</span>
+                <a href="/ProductDetail/Index">@Model.name</a>
+            </div>
+            <div class="ctlprow1-next">
+                <div class="ctlphover-img">
+                    <img src="~/Assets/Images/Products/@Model.image" height="75px" width="75px" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="ctlp-row2">
+            <div class="ctlprow2-left">
+                <div class="ctlprow2-img">
+                    <div class="mySlide" style="display: block;">
+                        <img src="~/Assets/User/Images/ban_1.jpg" width="685px" alt="358px">
+                    </div>
+                </div>
+            </div>
+            <div class="ctlprow2-right">
+                <div class="ctlprow2-main">
+                    <h1>@Model.name</h1>
+                    <div class="divider big"></div>
+                    <div class="price-block font-size">
+                        <p>
+                            <span>@Html.FormatValue(Model.price, "{0:#,###}") <u> đ</u></span>
+                        </p>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li> @Model.numberOfTable</li>
+                            <li> @Model.numberOfChair</li>
+                            <li> @Model.numberOfShelf</li>
+                        </ul>
+                    </div>
+                    <button class="button-book"><a href="#">đặt ngay</a></button>
+                    <div class="category">
+                        Danh mục:
+                        <a href="#">Sang trọng,</a>
+                        <a href="#">tiện nghi,</a>
+                        <a href="#">bền đẹp,</a>
+                        <a href="/Product/Index">Sản phẩm</a>
+                    </div>
+                    <div class="category">
+                        Tag:
+                        <a href="#">Bàn ghế</a>
+                    </div>
+                    <div class="ctlprow2-social">
+                        <img src="Icon/facebook.png" height="50px" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ctlp-row3">
+            <div class="ctlprow3-block">
+                <button value="mota" class="dropbtn">
+                    <img src="Icon/muitenxuong.PNG" height="20px" alt="">
+                    <span>Mô tả</span>
+                </button>
+                <div id="mota" class="ctlpblock-text">
+                    @Model.description
+                </div>
+                <button value="bosung" class="dropbtn">
+                    <img src="Icon/muitenxuong.PNG" height="20px" alt="">
+                    <span>Thông tin bổ sung</span>
+                </button>
+                <div id="bosung" class="ctlpblock-text height">
+                    <div class="text-row">
+                        <div class="text-col1">
+                            <h4>Chất liệu</h4>
+                        </div>
+                        <div class="text-col2"><span>@Model.material</span></div>
+                    </div>
+                    <div class="text-row">
+                        <div class="text-col1">
+                            <h4>Kích thước</h4>
+                        </div>
+                        <div class="text-col2"><span>@Model.size</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ctlp-row4">
+            <div class="ctlprow4-title">
+                <h3>Sản phẩm tương tự</h3>
+            </div>
+            <div class="ctlprow4-product">
+                <div class="col3-main">
+                    <div class="col3-block margin-right">
+                        <div class="col3-img">
+                            <img src="~/Assets/User/Images/ban_2.jpg" width="340px" height="180px;" alt="phong">
+                        </div>
+                        <div class="col3-text">
+                            <div class="title-block">
+                                <a href="/Product/Index"> BÀN LÀM VIỆC KÉO TIỆN ÍCH </a>
+                            </div>
+                            <div class="price-block">
+                                <span>3,500,000 <u> đ</u></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col3-block margin-right">
+                        <div class="col3-img">
+                            <img src="~/Assets/User/Images/ban_3.jpg" width="340px" height="180px" alt="phong">
+                        </div>
+                        <div class="col3-text">
+                            <div class="title-block">
+                                <a href="/Product/Index"> BÀN LÀM VIỆC VĂN PHÒNG </a>
+                            </div>
+                            <div class="price-block">
+                                <span>5,550,000 <u> đ</u></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col3-block">
+                        <div class="col3-img">
+                            <img src="~/Assets/User/Images/sofa_1.jpg" width="340px" height="180px" alt="phong">
+                        </div>
+                        <div class="col3-text">
+                            <div class="title-block">
+                                <a href="/Product/Index"> GHẾ SOFA XÁM NHẠT SANG TRỌNG </a>
+                            </div>
+                            <div class="price-block">
+                                <span>7,550,000 <u> đ</u></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

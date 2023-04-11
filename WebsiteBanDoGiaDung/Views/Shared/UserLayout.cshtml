@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>National Direct</title>
+    <link rel="stylesheet" href="~/Assets/User/css/Trangchu.css" type="text/css" />
+
+    
+    @RenderSection("style", required: false)
+</head>
+<body>
+    <div class="header">
+        <div class="bar-content">
+            <div class="header-top">
+                <div class="bar-left">
+                    <ul>
+                        <li><a href="#">CỬA HÀNG</a></li>
+                        <li><a href="#">GIỎ HÀNG</a></li>
+                        <li><a href="/Introduce/Index">GIỚI THIỆU</a></li>
+                    </ul>
+                </div>
+                <div class="bar-right">
+                    <div class="bar-addres">
+                        <img src="~/Assets/User/Icon/iconmap.png" alt="icon map" width="16px" />
+                        <span><a href="https://goo.gl/maps/jDy6PL7FEubE1CMTA">319 C16, LÝ THƯỜNG KIỆT, Q.11</a></span>
+                    </div>
+                    <div class="bar-phone">
+                        <img src="~/Assets/User/Icon/iconphone.png" alt="icon phone" width="18px" />
+                        <span><a href="#">0123 123 4444</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <div class="header-bot">
+                <div class="logo">
+                    <a href="/Home/Index"><img class="img-logo" src="~/Assets/User/Images/logo-mona.png" alt="logo" width="130px" /></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/Home/Index">TRANG CHỦ</a></li>
+                        <li><a href="/Product/Index">SẢN PHẨM</a></li>
+                        <li><a href="/News/Index">TIN TỨC</a></li>
+                        <li><a href="/Introduce/Index">GIỚI THIỆU</a></li>
+                        <li><a href="/Contact/Index">LIÊN HỆ</a></li>
+                        <li><a href="/Contact/Index">HOTLINE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <div class="footer">
+        <div class="footer-row1">
+            <div class="row1-main">
+                <div class="footer-col">
+                    <div class="col-title">
+                        <h3>CỬA HÀNG NATIONAL DIRECT</h3>
+                    </div>
+                    <div class="col-content">
+                        <div class="col-text">
+                            <div class="col-text-icon">
+                                <img src="~/Assets/User/Icon/iconmap.png" width="20px" height="20px" alt="iconmap" />
+                            </div>
+                            <div class="col-text-text">
+                                <p>319 C16 Lý Thường Kiệt, Q.11, HCM</p>
+                            </div>
+                        </div>
+                        <div class="col-text">
+                            <div class="col-text-icon">
+                                <img src="~/Assets/User/Icon/iconphone.PNG" width="20px" height="20px" alt="iconmap" />
+                            </div>
+                            <div class="col-text-text">
+                                <p>0123 123 4444</p>
+                            </div>
+                        </div>
+                        <div class="col-text">
+                            <div class="col-text-icon">
+                                <img src="~/Assets/User/Icon/iconmail.png" width="20px" height="20px" alt="iconmap" />
+                            </div>
+                            <div class="col-text-text">
+                                <a href="mailto:nationaldirect@gmail.com"><p>nationaldirect@gmail.com</p></a>
+                            </div>
+                        </div>
+                        <div class="col-text social">
+                            <img src="~/Assets/User/Icon/social.PNG" height="50px" width="180px" alt="anh mang xa hoi" />
+                        </div>
+                        <div class="col-img" >
+                            <img src="~/Assets/User/Images/footer-map-world.png" width="270px" alt="map" style="z-index: -1"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="col-title">
+                        <h3>LIÊN KẾT TRANG WEB</h3>
+                    </div>
+                    <div class="col-content">
+                        <div class="col-text">
+                            <div class="col-text-text padding-border">
+                                <a href="/News/Index">
+                                    <p>&#10095; Tổng quan về cửa hàng National Direct</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-text">
+                            <div class="col-text-text padding-border">
+                                <a href="/News/Index">
+                                    <p>&#10095; Các mẫu sản phẩm chất lượng</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-text">
+                            <div class="col-text-text padding-border">
+                                <a href="/News/Index">
+                                    <p>
+                                        &#10095; Tìm kiếm không gian sang trọng tại National Direct
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="col-title">
+                        <h3>SẢN PHẨM</h3>
+                    </div>
+                    <div class="col-content">
+                        <div class="col-text">
+                            <div class="col-text-text padding-border">
+                                <a href="/Product/Index">
+                                    <p>&#10095; SANG TRỌNG</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-text">
+                            <div class="col-text-text padding-border">
+                                <a href="/Product/Index">
+                                    <p>&#10095; TIỆN NGHI</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-text">
+                            <div class="col-text-text padding-border">
+                                <a href="/Product/Index">
+                                    <p>&#10095; GIA ĐÌNH</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-text">
+                            <div class="col-text-text padding-border">
+                                <a href="/Product/Index">
+                                    <p>&#10095; BỀN ĐẸP</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="col-title padding">
+                        <h3>BỘ SƯU TẬP</h3>
+                    </div>
+                    <div class="col-content">
+                        <div class="footer-img">
+                            <img src="~/Assets/User/Images/ban_1.jpg" height="64px" width="64px" alt="anh" />
+                        </div>
+                        <div class="footer-img">
+                            <img src="~/Assets/User/Images/bst1.jpg" height="64px" width="64px" alt="anh" />
+                        </div>
+                        <div class="footer-img">
+                            <img src="~/Assets/User/Images/bst2.jpg" height="64px" width="64px" alt="anh" />
+                        </div>
+                        <div class="footer-img">
+                            <img src="~/Assets/User/Images/bst3.jpg" height="64px" width="64px" alt="anh" />
+                        </div>
+                        <div class="footer-img">
+                            <img src="~/Assets/User/Images/bs4.jpg" height="64px" width="64px" alt="anh" />
+                        </div>
+                        <div class="footer-img">
+                            <img src="~/Assets/User/Images/bst5.jpg" height="64px" width="64px" alt="anh" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row2">
+            <div class="row2-main">
+                <span>Copyright © 2022 National Direct.</span>
+            </div>
+        </div>
+    </div>
+
+    @RenderSection("script", required: false)
+</body>
+</html>
